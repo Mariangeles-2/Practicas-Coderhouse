@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="styleflexbox.css">
+    <title>Propiedades de los items</title>
+</head>
+
+<body>
+    <header>
+        <h1>Flexbox</h1>
+
+        <p>Además de las propiedades que se aplican al contenedor flex (flex container), Flexbox ofrece varias
+            propiedades que afectan directamente a los elementos hijos (flex items). A continuación, se describen las
+            propiedades order, flex-grow, flex-shrink y flex-basis, junto con ejemplos de código para ilustrar su uso y
+            cómo afectan el comportamiento de los elementos flexibles.</p>
+    </header>
+
+    <main>
+        <h2>Propiedades de los items</h2>
+        <h3>1. order</h3>
+
+        <p>La propiedad order determina el orden en que se muestran los ítems flexibles dentro del contenedor flex. Por
+            defecto, todos los ítems tienen un valor order de 0.</p>
+
+        <p><b>Uso</b> Se utiliza para cambiar el orden de los ítems sin alterar el orden en el HTML.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="flex-container">
+            <div class="item" style="order: 2;">Item 1</div>
+            <div class="item" style="order: 1;">Item 2</div>
+            <div class="item" style="order: 3;">Item 3</div>
+        </div>
+
+        <p>En este ejemplo, aunque Item 1 aparece primero en el HTML, Item 2 se mostrará primero en el contenedor flex
+            debido a su valor order de 1, seguido por Item 1 con order 2, y finalmente Item 3 con order 3.</p>
+
+
+        <h3>2. flex-grow</h3>
+
+        <p>La propiedad flex-grow define la capacidad de un ítem flexible para crecer en proporción a los demás ítems flexibles dentro del mismo contenedor. El valor por defecto es 0 (no crece).</p>
+
+        <p><b>Uso</b> Se utiliza para permitir que un ítem ocupe más espacio disponible dentro del contenedor.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="flex-container">
+            <div class="item" style="flex-grow: 1;">Item 1</div>
+            <div class="item" style="flex-grow: 2;">Item 2</div>
+            <div class="item" style="flex-grow: 1;">Item 3</div>
+        </div>
+
+        .flex-container {
+        display: flex;
+        }
+        .item {
+        padding: 10px;
+        background-color: lightblue;
+        margin: 5px;
+        }
+        En este ejemplo, Item 2 crecerá dos veces más que Item 1 y Item 3 debido a su valor flex-grow de 2.
+
+        <h3>3. flex-shrink</h3>
+
+        <p>La propiedad flex-shrink determina la capacidad de un ítem flexible para reducir su tamaño si es necesario. El valor por defecto es 1 (puede encogerse).</p>
+        
+        <p><b>Uso</b> Se utiliza para controlar cuánto puede encogerse un ítem en relación con los demás ítems dentro del contenedor.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="flex-container">
+            <div class="item" style="flex-shrink: 1;">Item 1</div>
+            <div class="item" style="flex-shrink: 3;">Item 2</div>
+            <div class="item" style="flex-shrink: 1;">Item 3</div>
+        </div>
+
+        .flex-container {
+        display: flex;
+        width: 300px;
+        }
+        .item {
+        width: 200px;
+        padding: 10px;
+        background-color: lightgreen;
+        margin: 5px;
+        }
+        En este ejemplo, cuando el contenedor tiene un ancho de 300px, Item 2 se encogerá tres veces más que Item 1 y
+        Item 3
+        debido a su valor flex-shrink de 3.
+
+        <h3>4. flex-basis</h3>
+
+       <p>La propiedad flex-basis define el tamaño inicial de un ítem flexible antes de que se distribuya el espacio restante. Puede ser un valor fijo (px, em, etc.) o auto.</p>
+
+        <p><b>Uso</b> Se utiliza para establecer el tamaño base de un ítem antes de aplicar flex-grow o flex-shrink.</p>
+
+        <h4>Ejemplo</h4>
+        
+        <div class="flex-container">
+            <div class="item" style="flex-basis: 100px;">Item 1</div>
+            <div class="item" style="flex-basis: 150px;">Item 2</div>
+            <div class="item" style="flex-basis: 100px;">Item 3</div>
+        </div>
+
+        .flex-container {
+        display: flex;
+        }
+        .item {
+        padding: 10px;
+        background-color: lightpink;
+        margin: 5px;
+        }
+        En este ejemplo, Item 1 y Item 3 tendrán un tamaño inicial de 100px, mientras que Item 2 tendrá un tamaño
+        inicial de
+        150px.
+
+        Conclusión
+        Las propiedades de Flexbox aplicadas a los ítems (order, flex-grow, flex-shrink y flex-basis) proporcionan un
+        control
+        preciso sobre cómo los elementos flexibles se distribuyen y dimensionan dentro de un contenedor flex. Comprender
+        y
+        utilizar estas propiedades te permitirá diseñar layouts más flexibles y adaptables a diferentes necesidades de
+        diseño y
+        tamaños de pantalla.
+    </main>
+
+
+    <footer>
+        <p class="footer"><a href="../../index.html">Índice</a></p>
+    </footer>
+</body>
+
+</html>

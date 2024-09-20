@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="stylepseodoclasesbootstrap.css" <title>Bootstrap: Usando sus elementos</title>
+</head>
+
+<body>
+    <header>
+        <h1>6.3. Bootstrap: Usando sus Elementos</h1>
+        <h2>Estructura basada en contenedores</h2>
+        <p>Bootstrap es uno de los frameworks más populares para el desarrollo web frontend. Facilita la creación de
+            sitios web responsive, es decir, que se adaptan a diferentes tamaños de pantalla y dispositivos. Una de las
+            características fundamentales de Bootstrap es su estructura basada en contenedores.</p>
+
+    </header>
+
+    <main>
+
+        <h2>Tipos de Contenedores</h2>
+        <p>Bootstrap ofrece dos tipos principales de contenedores para estructurar y alinear el contenido en una página
+            web:
+            .container y .container-fluid.</p>
+
+        <ul>
+            <li>.container</li>
+            <p>Es un contenedor fijo con un ancho máximo predefinido. Este ancho se ajusta en función del tamaño de la
+                pantalla (breakpoint).</p>
+
+            <p>Proporciona un margen (padding) a los lados del contenido para que esté centrado en la página.</p>
+
+            <p>Ideal para layouts centrados y cuando se desea mantener un ancho constante en diferentes dispositivos.
+            </p>
+
+            <li>.container-fluid</li>
+            <p>Es un contenedor de ancho completo que abarca el 100% del ancho del viewport.</p>
+
+            <p>No tiene márgenes laterales y se adapta completamente al tamaño de la pantalla, proporcionando un diseño
+                más fluido y adaptable.</p>
+
+            <p>Perfecto para layouts que necesitan ocupar todo el espacio disponible en la pantalla.</p>
+
+        </ul>
+
+        <h4>Ejemplos de Uso</h4>
+
+        <p>Contenedor Fijo (.container):</p>
+        <div class="container"> HOLA </div>
+
+        <p>Contenedor Fluido (.container-fluid):</p>
+        <div class="container-fluid"> CHAU </div>
+
+        <h3>Introducción al Sistema de Grillas de Bootstrap</h3>
+
+        <p>El sistema de grillas es el núcleo de la capacidad de Bootstrap para crear layouts responsive. Permite
+            dividir el espacio en filas y columnas, adaptándose a diferentes tamaños de pantalla mediante breakpoints
+            predefinidos.</p>
+
+        <h3>Filas y Columnas</h3>
+        <h4>Filas (.row):</h4>
+        <p>Las filas son contenedores horizontales que agrupan columnas.</p>
+
+        <p>Utilizan un sistema flexbox para alinear y distribuir el contenido.</p>
+
+        <p>Las filas deben estar siempre dentro de un contenedor (.container o .container-fluid).</p>
+
+        <h3>Columnas (.col):</h3>
+        <p>Las columnas dentro de una fila se dividen en 12 partes iguales.</p>
+
+        <p>Puedes especificar cuántas columnas ocupará un elemento en diferentes tamaños de pantalla utilizando clases
+            como .col-, .col-sm-, .col-md-, .col-lg-, y .col-xl-.</p>
+
+        <p>Permiten crear layouts responsive que se adaptan a diferentes dispositivos y tamaños de pantalla.</p>
+
+        <h4>Ejemplo Básico de Uso</h4>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <!-- Columna que ocupa 12/12 en pantallas pequeñas y 8/12 en pantallas medianas -->
+                    Contenido
+                </div>
+                <div class="col-12 col-md-4">
+                    <!-- Columna que ocupa 12/12 en pantallas pequeñas y 4/12 en pantallas medianas -->
+                    Contenido
+                </div>
+            </div>
+        </div>
+
+        <p>En este ejemplo:</p>
+
+        <p>En dispositivos pequeños (por ejemplo, teléfonos móviles), cada columna ocupa el 100% del ancho (12/12).</p>
+
+        <p>En dispositivos medianos (por ejemplo, tabletas), una columna ocupa el 66.67% del ancho (8/12) y la otra
+            ocupa el 33.33% (4/12).</p>
+
+        <h3>Breakpoints</h3>
+        <p>Bootstrap define varios breakpoints que corresponden a diferentes tamaños de pantalla. Estos son:</p>
+
+        <ul>
+            <li>xs (extra small): &lt576px </li>
+            <li>sm (small): ≥576px </li>
+            <li>md (medium): ≥768px </li>
+            <li>lg (large): ≥992px </li>
+            <li>xl (extra large): ≥1200px </li>
+            <li>xxl (extra extra large): ≥1400px </li>
+        </ul>
+
+        <p>Utilizando estos breakpoints, puedes crear layouts altamente adaptables que se ven bien en cualquier
+            dispositivo.</p>
+
+        <p>Conclusión Bootstrap proporciona una estructura sólida y flexible para el diseño web a través de sus
+            contenedores y sistema de grillas. Utilizando .container y .container-fluid, puedes definir cómo se
+            comportará tu contenido en diferentes tamaños de pantalla, mientras que las filas y columnas te permiten
+            crear layouts responsive y bien organizados. Recuerda que puedes acudir a la documentación de Bootstrap
+            desde su web para poder ver todas las cosas que puedes realizar. Ahí también verás el código que ellos
+            mismos te proporcionan con los ejemplos.</p>
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <footer>
+        <p class="footer"><a href="../../index.html">Índice</a></p>
+    </footer>
+
+</body>
+
+</html>

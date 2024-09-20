@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../Grids/stylegrids.css">
+    <title>Grids</title>
+</head>
+
+<body>
+    <header>
+        <h1>Grids</h1>
+        <h2>Propiedades Básicas de CSS Grid Aplicadas al Contenedor (Padre)</h2>
+        <p>Estas propiedades permiten definir la estructura y disposición de los elementos hijos dentro de una grilla. A
+            continuación, se detallan cada una de estas propiedades junto con ejemplos de código CSS y su resultado
+            visual.</p>
+    </header>
+
+    <main>
+        <h3>1. display: grid</h3>
+        La propiedad display: grid convierte un elemento en un contenedor de grilla, lo que permite organizar sus
+        elementos hijos en filas y columnas.
+
+        <div class="activar-grid">
+            <div class="caja-ejemplo"></div>
+            <div class="caja-ejemplo"></div>
+            <div class="caja-ejemplo"></div>
+            <div class="caja-ejemplo"></div>
+            <div class="caja-ejemplo"></div>
+            <div class="caja-ejemplo"></div>
+        </div>
+
+        <h3>2. grid-template-columns</h3>
+        <p>La propiedad grid-template-columns define la estructura de las columnas en la grilla. Puedes especificar el
+            tamaño de cada columna usando unidades como px, %, fr, entre otras.</p>
+
+        <div class="grid-template-columns">
+            <div class="caja-ejemplo">Columna 1</div>
+            <div class="caja-ejemplo">Columna 2</div>
+            <div class="caja-ejemplo">Columna 3</div>
+            <div class="caja-ejemplo">1 fr</div>
+            <div class="caja-ejemplo">2 fr</div>
+            <div class="caja-ejemplo">1 fr</div>
+        </div>
+
+        <h3>3. grid-template-rows</h3>
+        <p>La propiedad grid-template-rows define la estructura de las filas en la grilla, similar a cómo
+            grid-template-columns define las columnas.</p>
+
+        <div class="grid-template-row">
+            <div class="caja-ejemplo">Fila 1 100px</div>
+            <div class="caja-ejemplo">FIla 2 200px</div>
+        </div>
+
+        <h3>4. grid-template-areas</h3>
+        <p>La propiedad grid-template-areas permite nombrar áreas dentro de la grilla para facilitar el posicionamiento
+            de los elementos hijos. Se usan nombres de áreas definidos en los elementos hijos.</p>
+
+        <div class="grid-template-areas">
+            <div class="header caja-ejemplo">Header</div>
+            <div class="header2 caja-ejemplo">Header</div>
+            <div class="sidebar caja-ejemplo">Sidebar</div>
+            <div class="main caja-ejemplo">Main</div>
+        </div>
+
+        <h3>5. column-gap</h3>
+        <p>La propiedad column-gap (anteriormente grid-column-gap) define el espacio entre las columnas de la grilla.
+        </p>
+
+        <div class="columns-gap">
+            <div class="caja-ejemplo">Columna 1</div>
+            <div class="caja-ejemplo">Columna 2</div>
+            <div class="caja-ejemplo">Columna 3</div>
+            <div class="caja-ejemplo">1 fr</div>
+            <div class="caja-ejemplo">2 fr</div>
+            <div class="caja-ejemplo">1 fr</div>
+        </div>
+
+        <h3>6. row-gap</h3>
+        La propiedad row-gap (anteriormente grid-row-gap) define el espacio entre las filas de la grilla.
+
+        <div class="row-gap">
+            <div class="caja-ejemplo">Fila 1 100px</div>
+            <div class="caja-ejemplo">Fila 2 100px</div>
+        </div>
+
+        <h3>Ejemplo Completo</h3>
+
+        <p>A continuación, se presenta un ejemplo completo que combina varias de estas propiedades para ilustrar cómo se
+            pueden usar juntas para crear una grilla compleja.</p>
+
+        <div class="ejemplo-completo">
+            <div class="title1 caja-ejemplo">Columna 1</div>
+            <div class="title2 caja-ejemplo">Columna 2</div>
+            <div class="title3 caja-ejemplo">Columna 3</div>
+            <div class="contenido1 caja-ejemplo">1 fr</div>
+            <div class="contenido2 caja-ejemplo">2 fr</div>
+        </div>
+
+        <h4>Explicación</h4>
+
+        <p>En este ejemplo, tenemos un contenedor de grilla con tres columnas y dos filas.
+            Las áreas se definen con nombres como "header", "sidebar" y "." (un punto vacío).
+            Se aplica un espacio de 20px entre columnas y 10px entre filas.
+            Cada elemento hijo (header, sidebar, main) se posiciona en el área correspondiente usando la propiedad
+            grid-area.
+            Se aplican colores de fondo diferentes a cada área para visualizar la estructura de la grilla.</p>
+    </main>
+
+    <footer>
+        <p class="footer"><a href="../../index.html">Índice</a></p>
+    </footer>
+    
+</body>
+
+</html>

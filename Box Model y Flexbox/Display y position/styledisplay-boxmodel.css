@@ -1,0 +1,82 @@
+.block-element {
+    /*Hace que un elemento en linea actue como elemento en bloque*/
+    display: block;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: aqua;
+}
+
+.inline-element {
+    /*Hace que un elemento en bloque actue como elemento en linea*/
+    display: inline;
+    color: red;
+    font-weight: bold;
+}
+
+.inline-block-element {
+    /*Hace que actúe como elemento con línea pudiendo poner características del elemnto en bloque (ancho y alto)*/
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    background-color: lightgreen;
+    margin: 10px;
+}
+
+.static-box {
+    /*Valor por defecto. Los elementos con este valor se posicionan según el flujo*/
+    position: rstatic;
+    top: 20px;
+    left: 10px;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.relative-box {
+    /*posiciona el elemento en relación con su posición original*/
+    position: relative;
+    top: 20px;
+    left: 10px;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.container {
+    /*primer ansestro - contenedor*/
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+}
+
+.absolute-box {
+    /*posiciona el elemento en relación con el primer ancestro posicionado (no estático)*/
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.fixed-box {
+    /*posiciona el elemento en relación con la ventana del navegador*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+.sticky-container {
+    /*primer ansestro - contenedor*/
+    height: 1000px;
+    background-color: lightyellow;
+}
+
+.sticky-box {
+    /*Se comporta como relative hasta que su contenedor alcanza una posición de desplazamiento específica, entonces se comporta como fixed*/
+    position: sticky;
+    top: 10px;
+    background-color: lightpink;
+    padding: 10px;
+}

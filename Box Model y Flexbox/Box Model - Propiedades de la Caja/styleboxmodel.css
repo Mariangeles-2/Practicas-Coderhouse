@@ -1,0 +1,60 @@
+.content-box {
+    /*Contenedor*/
+    width: 200px;
+    height: 100px;
+    background-color: lightgrey;
+}
+
+.padding-box {
+    /*Agrega margen interno y mueve el contenido de la caja*/
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    padding: 20px; /*agujas del reloj si son diferentes*/
+}
+
+.border-box {
+    /*Agrga borde*/
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    padding: 20px;
+    border: 5px solid black;
+    /* tamaño - tipo - color*/
+}
+
+.margin-box {
+    /*Agrega margen externo y mueve a la caja sobre la página*/
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 30px;
+}
+
+.box-model {
+    /*Ejemplo completo*/
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 30px;
+}
+
+.caja {
+    /*Ejemplo 2*/
+    width: 200px;
+    /*alto - px - % - hv (altura de la ventana del nav)*/
+    height: 200px;
+    /*ancho*/
+    background-color: lightblue;
+    /*color de fondo*/
+    border: 2px solid blue;
+    /*borde con 3 valores*/
+    text-align: center;
+    /*alineación del texto*/
+    line-height: 100px;
+    /*establece la altura de una casilla remarcada por líneas*/
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <header>
+        <h1>6.2. Bootstrap</h1>
+        <h2>Introducción a Bootstrap</h2>
+        <p>Bootstrap es un framework front-end desarrollado por Twitter que facilita la creación de interfaces web
+            modernas y responsivas utilizando CSS y JavaScript. Es una de las herramientas más populares para el
+            desarrollo web debido a su facilidad de uso, amplia documentación y una gran comunidad de usuarios.</p>
+    </header>
+
+    <main>
+        <h3>Librería</h3>
+        Una librería es un conjunto de funciones y utilidades preescritas que los desarrolladores pueden usar para
+        realizar tareas comunes de programación. Las librerías ayudan a simplificar el código y a mejorar la eficiencia
+        al proporcionar soluciones reutilizables para problemas comunes. Un ejemplo de librería es jQuery, que ofrece
+        funciones simplificadas para manipular el DOM, manejar eventos y realizar peticiones AJAX.
+
+        <h3>Framework</h3>
+        Un framework es una plataforma o estructura de software que proporciona una base sólida y estándar para el
+        desarrollo de
+        aplicaciones. Los frameworks no solo incluyen librerías de funciones, sino que también establecen una
+        arquitectura y directrices para el desarrollo, ayudando a los desarrolladores a seguir un patrón coherente. Un
+        framework incluye componentes como controladores, modelos, vistas, y herramientas de gestión de rutas. Bootstrap
+        es un framework que ofrece una estructura completa para el desarrollo de interfaces de usuario.
+
+        <h3>Ventajas de Utilizar Bootstrap para Desarrollar Sitios Web Responsive</h3>
+        <ol>
+            <li><h4>Diseño Responsive</h4></li>
+            Bootstrap está diseñado para crear sitios web que se adaptan automáticamente a diferentes tamaños de
+            pantalla y
+            dispositivos. Utiliza un sistema de rejilla flexible que permite diseñar interfaces que se ajustan a
+            móviles,
+            tabletas y
+            computadoras de escritorio.
+
+            <li><h4>Componentes Preconstruidos</h4></li>
+            Bootstrap incluye una amplia gama de componentes preconstruidos como botones, formularios, tarjetas, menús
+            de navegación, modales, y mucho más. Estos componentes son fáciles de integrar y personalizar, lo que
+            acelera el proceso de
+            desarrollo.
+
+            <li><h4>Consistencia</h4></li>
+            Bootstrap asegura consistencia en el diseño de las interfaces a través de sus componentes y estilos
+            estandarizados. Esto es especialmente útil en equipos de desarrollo grandes donde varios desarrolladores
+            trabajan en el mismo
+            proyecto.
+
+            <li><h4>Fácil de Usar</h4></li>
+            Bootstrap es fácil de usar y no requiere una curva de aprendizaje empinada. Los desarrolladores pueden
+            comenzar rápidamente integrando las hojas de estilo y scripts de Bootstrap en sus proyectos.
+
+            <li><h4>Gran Comunidad y Documentación</h4></li>
+            Bootstrap cuenta con una gran comunidad de usuarios y una documentación extensa y detallada. Esto facilita
+            encontrar soluciones a problemas comunes, acceder a ejemplos prácticos y obtener soporte de otros
+            desarrolladores.
+
+            <li><h4>Personalización</h4></li>
+            Bootstrap es altamente personalizable. Los desarrolladores pueden personalizar los componentes y estilos
+            utilizando variables SASS para ajustarse a los requerimientos específicos de su proyecto.
+        </ol>
+
+        <h4>Ejemplo Básico de Uso de Bootstrap</h4>
+
+        <!DOCTYPE html>
+        <html lang="es">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ejemplo Bootstrap</title>
+            <!-- Enlace a la hoja de estilos de Bootstrap -->
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        </head>
+
+        <body>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Mi Sitio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>Bienvenidos a Mi Sitio</h1>
+                        <p>Este es un ejemplo de una página web responsiva creada con Bootstrap.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tarjeta de Ejemplo</h5>
+                                <p class="card-text">Este es un ejemplo de una tarjeta Bootstrap. Puedes usar tarjetas
+                                    para
+                                    mostrar contenido de manera organizada.</p>
+                                <a href="#" class="btn btn-primary">Más Información</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Enlace a los scripts de Bootstrap -->
+            <script src="<https://code.jquery.com/jquery-3.5.1.slim.min.js>"></script>
+            <script src="<https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js>"></script>
+            <script src="<https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js>"></script>
+        </body>
+
+        </html>
+
+        <p>En este ejemplo, utilizamos Bootstrap para crear una barra de navegación responsiva y una estructura de contenido que se adapta a diferentes tamaños de pantalla. Bootstrap simplifica el proceso de diseño y desarrollo, permitiendo a los desarrolladores centrarse en la funcionalidad y la experiencia del usuario.</p>
+
+    </main>
+
+
+    <footer>
+        <p class="footer"><a href="../../index.html">Índice</a></p>
+    </footer>
+</body>
+
+</html>

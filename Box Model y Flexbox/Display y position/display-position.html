@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styledisplay-boxmodel.css">
+    <link rel="stylesheet" href="../../index.css">
+    <title>Display y Position</title>
+</head>
+
+<body>
+    <header>
+        <h1>Display y position</h1>
+    </header>
+
+    <main>
+        <H2>La Propiedad display en CSS y su Impacto en la Visualización de los Elementos</H2>
+
+        <p>La propiedad display en CSS es para controlar cómo se muestran los elementos HTML en una página web. Los
+            valores display son: block, display: inline y display: inline-block, con ejemplos de cómo afectan la
+            visualización de los elementos.</p>
+
+        <h2>Valores de la Propiedad display</h2>
+
+        <h3>1. display: block</h3>
+
+        <p>El valor block hace que un elemento se comporte como un bloque. Los elementos de bloque ocupan todo el ancho
+            disponible de su contenedor y comienzan en una nueva línea.</p>
+
+        <h4>Ejemplos de Elementos de Bloque</h4>
+        <p>Por defecto, los siguientes elementos son de tipo bloque: &lt;div&gt;, &lt;p&gt;, &lt;h1&gt; - &lt;h6&gt;,
+            &lt;section&gt;, &lt;article&gt;, &lt;header&gt;, &lt;footer&gt;.</p>
+
+        <h4>Ejemplo en CSS</h4>
+
+        <div class="block-element">Elemento de Bloque</div>
+        <a class="block-element">Este es un párrafo.</a>
+
+        <p>En este ejemplo, los elementos &lt;div&gt; y &lt;a&gt; se muestran como bloques, ocupando el 50% del ancho de
+            su contenedor, empezando en una nueva línea y con un margen de 10px arriba y abajo.</p>
+
+        <p>Si utilizamos un elemento en bloque, como puede ser un &lt;h2&gt;, por más que tengas poco material en el
+            content, por defecto va a ocupar el 100% de la pantalla.</p>
+
+        <p>De igual forma, todo esto podemos cambiarlo con CSS también.</p>
+
+        <h3>2. display: inline</h3>
+
+        <p>El valor inline hace que un elemento se comporte como un elemento en línea. Los elementos en línea no
+            comienzan en una nueva línea y solo ocupan el espacio necesario para su contenido, todo lo contrario que en
+            el display: block.</p>
+
+        <p class="resaltado">Importante: en un elemento con este tipo de display, no se puede aplicar margin, padding,
+            height ni width.</p>
+
+        <h4>Ejemplos de Elementos en Línea</h4>
+        <p>Por defecto, los siguientes elementos son de tipo en línea: &lt;span&gt;, &lt;a&gt;, &lt;img&gt;,
+            &lt;strong&gt;, &lt;em&gt;.</p>
+
+        <h4>Ejemplo en CSS</h4>
+
+        <div class="inline-element">Elemento en Línea</div>
+        <p class="inline-element">Enlace</p>
+
+        <p>En este ejemplo, los elementos &lt;div&gt; y &lt;p&gt; se muestran en línea, ocupando solo el espacio
+            necesario para su contenido y permitiendo que otros elementos se alineen a su lado en la misma línea.</p>
+
+        <h3>3. display: inline-block</h3>
+
+        <p>El valor inline-block combina características de los elementos en línea y de bloque. Un elemento con display:
+            inline-block se muestra en línea con otros elementos, pero permite definir dimensiones como ancho y alto,
+            similares a un elemento de bloque.</p>
+
+        <h4>Ejemplo en CSS</h4>
+
+        <div class="inline-block-element">Elemento Inline-Block</div>
+
+        <p>En este ejemplo, el elemento &lt;div&gt; se muestra en línea con otros elementos, pero permite definir su
+            tamaño y aplicar márgenes, comportándose como un bloque dentro de una línea.</p>
+
+        <p>Este tipo de display es muy útil, ya que si queremos que un elemento solamente ocupe el ancho de su contenido
+            (display: inline) pero necesitamos a su vez aplicarle margin, padding, height o width, podemos usarlo. En
+            conclusión, nos permite usar margin y padding, darle un width y un height, y el elemento entonces ocupará el
+            tamaño de su contenido.</p>
+
+        <h2>Comparación de los Valores display</h2>
+        <div>
+            <ul>
+                <li><b>block</b>
+                    <ol>
+                        <li>Ocupación de Ancho Completo: Ocupa todo el ancho disponible.</li>
+                        <li>Nueva Línea: Siempre comienza en una nueva línea.</li>
+                        <li>Dimensiones: Permite definir ancho y alto.</li>
+                    </ol>
+                </li>
+
+
+                <li><b>inline</b>
+                    <ol>
+                        <li>Ocupación de Espacio Necesario: Solo ocupa el espacio necesario para su contenido.</li>
+                        <li>Misma Línea: Permite que otros elementos se alineen en la misma línea.</li>
+                        <li>Dimensiones: No permite definir ancho y alto.</li>
+                    </ol>
+                </li>
+
+
+                <li><b>inline-block</b>
+                    <ol>
+                        <li>Comportamiento Híbrido: Se alinea en línea con otros elementos pero permite definir
+                            dimensiones.</li>
+                        <li>Dimensiones: Permite definir ancho y alto.</li>
+                        <li>Misma Línea: Permite que otros elementos se alineen en la misma línea.</li>
+                    </ol>
+                </li>
+
+            </ul>
+        </div>
+
+        <h2>Conclusión</h2>
+        <p>La propiedad display en CSS es crucial para controlar la disposición y el flujo de los elementos HTML en una
+            página web. Comprender cómo funcionan los valores block, inline e inline-block te permitirá diseñar layouts
+            más flexibles y eficientes, adaptando la visualización de los elementos a las necesidades específicas de tu
+            proyecto.</p>
+
+        <h2>Propiedades de Posicionamiento en CSS</h2>
+        <p>El posicionamiento en CSS es fundamental para controlar cómo se colocan los elementos en una página web. A
+            continuación, se describen las diferentes propiedades de posicionamiento.</p>
+
+        <h3>1. position: static</h3>
+
+        <p>position: static es el valor por defecto. Los elementos con este valor se posicionan según el flujo normal
+            del documento, sin afectar otros elementos.</p>
+
+        <p><b>Uso</b> Se utiliza cuando no se necesita un posicionamiento especial.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="static-box">Elemento Estático</div>
+
+        <p>En este ejemplo, el elemento &lt;div&gt; se posiciona de acuerdo al flujo normal del documento.</p>
+
+        <h3>2. position: relative</h3>
+
+        <p>position: relative posiciona el elemento en relación con su posición original en el flujo del documento. Se
+            pueden usar las propiedades top, right, bottom y left para desplazar el elemento.</p>
+
+        <p>Esta propiedad permite mover el elemento en cualquier dirección y que este no pierda su espacio en el
+            documento.</p>
+
+        <p><b>Uso</b> Útil para desplazar un elemento ligeramente desde su posición original sin sacarlo del flujo del
+            documento.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="relative-box">Elemento Relativo</div>
+
+        <p>En este ejemplo, el elemento &lt;div&gt; se desplaza 20px hacia abajo y 10px hacia la derecha desde su
+            posición original.</p>
+
+        <h3>3. position: absolute</h3>
+
+        <p>position: absolute posiciona el elemento en relación con el primer ancestro posicionado (no estático). El
+            elemento se elimina del flujo del documento, permitiendo que otros elementos ocupen su lugar.</p>
+
+        <p><b>Uso</b> Se usa para colocar un elemento en una ubicación exacta dentro de su contenedor posicionado.
+        </p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="container">
+            <div class="absolute-box">Elemento Absoluto</div>
+        </div>
+
+        <p>En este ejemplo, el elemento &lt;div class="absolute-box"&gt; se posiciona 50px desde la parte superior y
+            50px desde la izquierda del contenedor relativo.</p>
+
+        <h3>4. position: fixed</h3>
+
+        <p>position: fixed posiciona el elemento en relación con la ventana del navegador. El elemento se mantiene en la
+            misma posición incluso cuando se desplaza la página.</p>
+
+        <p><b>Uso</b> Ideal para elementos que deben estar siempre visibles, como menús de navegación o botones de
+            vuelta al inicio.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="fixed-box">Elemento Fijo</div>
+
+        <p>En este ejemplo, el elemento &lt;div class="fixed-box"&gt; se mantiene en la esquina superior derecha de la
+            ventana del navegador, incluso al desplazarse.</p>
+
+        <h3>5. position: sticky</h3>
+
+        <p>position: sticky alterna entre relative y fixed dependiendo del desplazamiento de la página. El elemento se
+            comporta como relative hasta que su contenedor alcanza una posición de desplazamiento específica, momento en
+            el que se comporta como fixed.</p>
+
+        <p><b>Uso</b> Útil para encabezados o menús que deben quedarse fijos después de desplazarse una cierta
+            distancia.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="sticky-container">
+            <div class="sticky-box">Elemento Sticky</div>
+            <p>Contenido de ejemplo...</p>
+        </div>
+
+        <p>En este ejemplo, el elemento &lt;div class="sticky-box"&gt; se mantiene a 10px del borde superior de la
+            ventana del navegador cuando se desplaza, hasta que se alcanza el final de su contenedor.</p>
+
+        <h2>Conclusión</h2>
+        <p>Comprender y utilizar correctamente las propiedades de posicionamiento en CSS (static, relative, absolute,
+            fixed y sticky) es crucial para diseñar layouts precisos y funcionales. Cada valor de position ofrece un
+            conjunto único de comportamientos y posibilidades que pueden adaptarse a diversas necesidades de diseño web.
+        </p>
+
+    </main>
+
+    <footer>
+        <p class="footer"><a href="../../index.html">Índice</a></p>
+    </footer>
+</body>
+
+</html>

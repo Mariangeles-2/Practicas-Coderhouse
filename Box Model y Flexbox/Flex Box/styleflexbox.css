@@ -1,0 +1,240 @@
+.caja {
+    width: 150px;
+    height: 12vh;
+    background-color: lightblue;
+    border: 2px solid blue;
+    text-align: center;
+    line-height: 100px;
+    margin: 10px;
+    padding: 10px;
+}
+
+/*1. Display*/
+.flex {
+    /*Activa Flexbox*/
+    display: flex;
+    background-color: lightgray;
+}
+
+/*2. Direcciona en fila o en columna*/
+.flex-direction-row {
+    /*Da dirección en fila*/
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+    /*Da direccion en fila reversa*/
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-direction-column {
+    /*Da direccion en columna*/
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+    /*Da direccion en columna reversa*/
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/*3. Ajusta en la página*/
+.flex-nowrap {
+    /*Pone cada una de las cajas en fila, no se ajusta. Este es el valor por defecto de los flex box*/
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.flex-wrap {
+    /*A medida que se agranda o se achica la pantalla, las cajas se reacomodan para abajo*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+    /*Pone cada una de las cajas en una fila reversa, las cajas se reacomodan para arriba.*/
+    display: flex;
+    flex-wrap: row-reverse;
+
+}
+
+/*4. Combina row y wrap*/
+.flex-flow {
+    display: flex;
+    /*Combina direccion & ajuste*/
+    flex-flow: row
+        /*-reverse*/
+        wrap
+        /*-reverse*/
+    ;
+}
+
+/*5. Alinea los elementos flexibles a lo largo del eje principal del contenedor*/
+
+.flex-start {
+    /*Los elementos se alinean al inicio. Este es el valor por defecto*/
+    display: flex;
+    justify-content: flex-start
+}
+
+.flex-end {
+    /*Los elementos se alinean al final*/
+    display: flex;
+    justify-content: flex-end;
+}
+
+.center {
+    /*Los elementos se centran*/
+    display: flex;
+    justify-content: center;
+}
+
+.space-between {
+    /*Los elementos se distribuyen uniformemente con el primer elemento al inicio y el último al final.*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.space-around {
+    /*Los elementos se distribuyen uniformemente con espacio igual alrededor de cada uno.*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.space-evenly {
+    /*Los elementos se distribuyen con espacio igual entre ellos.*/
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/**/
+.align-items-stretch {
+    /*Los elementos se estiran para llenar el contenedor. Este es el valor por defecto.*/
+    display: flex;
+    border: 2px solid black;
+    height: 30vh;
+    margin-bottom: 30px;
+    align-items: strech;
+}
+
+.align-items-flex-start {
+    /*Los elementos se alinean al inicio del contenedor.*/
+    display: flex;
+    border: 2px solid black;
+    height: 30vh;
+    margin-bottom: 30px;
+    align-items: flex-start
+}
+
+.align-items-flex-end {
+    /*Los elementos se alinean al final del contenedor.*/
+    display: flex;
+    border: 2px solid black;
+    height: 30vh;
+    margin-bottom: 30px;
+    align-items: flex-end
+}
+
+.align-items-center {
+    /*Los elementos se centran en el contenedor.*/
+    display: flex;
+    border: 2px solid black;
+    height: 30vh;
+    margin-bottom: 30px;
+    align-items: center
+}
+
+.align-items-baseline {
+    /*Los elementos se alinean a lo largo de su línea base.*/
+    display: flex;
+    border: 2px solid black;
+    height: 30vh;
+    margin-bottom: 30px;
+    align-items: baseline;
+}
+
+/*Alinea las líneas del contenedor flexible*/
+.align-content-stretch {
+    /*Las líneas se estiran para ocupar el espacio disponible. Este es el valor por defecto.*/
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    height: 60vh;
+    margin-bottom: 30px;
+    align-content: stretch;
+}
+
+.align-content-flex-start {
+    /*Las líneas se alinean al inicio del contenedor.*/
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    height: 60vh;
+    margin-bottom: 30px;
+    align-content: flex-start;
+}
+
+.align-content-flex-end {
+    /*Las líneas se alinean al final del contenedor.*/
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    height: 60vh;
+    margin-bottom: 30px;
+    align-content: flex-end;
+}
+
+.align-content-center {
+    /*Las líneas se centran en el contenedor.*/
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    height: 60vh;
+    margin-bottom: 30px;
+    align-content: center;
+}
+
+.align-content-space-between {
+    /*Las líneas se distribuyen uniformemente con el primer línea al inicio y la última al final.*/
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    height: 60vh;
+    margin-bottom: 30px;
+    align-content: space-between;
+}
+
+.align-content-space-around {
+    /*Las líneas se distribuyen uniformemente con espacio igual alrededor de cada una.*/
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    height: 60vh;
+    margin-bottom: 30px;
+    align-content: space-around;
+}
+
+.align-content-space-evenly {
+    /*Las líneas se distribuyen con espacio igual entre ellas. Ejemplo*/
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    height: 60vh;
+    margin-bottom: 30px;
+    align-content: space-evenly;
+}
+
+/*Propiedades de los items en Flexbox*/
+
+.flex-container {
+ display: flex;
+}
+            
+.item {
+padding: 10px;
+background-color: lightcoral;
+margin: 5px;
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleflexbox.css">
+    <link rel="stylesheet" href="../../index.css">
+    <title>FlexBox</title>
+</head>
+
+<body>
+    <header>
+        <h1>Flexbox: Introducción</h1>
+
+        <h2>Propiedades Principales de Flexbox para el Contenedor </h2>
+
+        <p>Flexbox es un modelo de diseño en CSS que facilita la creación de layouts flexibles y eficientes. Se centra
+            en
+            el uso de un contenedor flexible (flex container) y elementos hijos flexibles (flex items). Esto nos
+            permitirá
+            organizar los elementos de nuestra web de una forma más dinámica, y servirá a futuro para adaptar tu sitio a
+            distintos dispositivos.</p>
+
+        <p>A continuación, se explican las propiedades principales que se aplican al contenedor flex, junto con ejemplos
+            de
+            código CSS.</p>
+    </header>
+    <main>
+        <h3>1. display: flex</h3>
+
+        <p>La propiedad display: flex define un contenedor como un flex container y habilita el uso de todas las
+            propiedades
+            Flexbox en sus elementos hijos.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="flex">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <p>En este ejemplo, el contenedor &lt;div class="flex-container"&gt; se convierte en un flex container,
+            permitiendo
+            que
+            sus hijos se comporten como flex items.</p>
+
+        <h3>2. flex-direction</h3>
+
+        <p>La propiedad flex-direction especifica la dirección en la que los elementos flexibles (flex items) se colocan
+            dentro del contenedor.</p>
+
+        <div><b>Valores</b>
+            <ul>
+                <li>row (valor por defecto): Los elementos se colocan en una fila horizontal.</li>
+                <li>row-reverse: Los elementos se colocan en una fila horizontal en orden inverso.</li>
+                <li>column: Los elementos se colocan en una columna vertical.</li>
+                <li>column-reverse: Los elementos se colocan en una columna vertical en orden inverso.</li>
+            </ul>
+        </div>
+
+        <h4>Ejemplo</h4>
+        <h4>row</h4>
+        <div class="flex-direction-row">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+        <h4>row-reverse</h4>
+        <div class="flex-direction-row-reverse">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+        <h4>column</h4>
+        <div class="flex-direction-column">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+        <h4>column-reverse</h4>
+        <div class="flex-direction-column-reverse">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h3>3. flex-wrap</h3>
+
+        <p>La propiedad flex-wrap especifica si los elementos flexibles deben ajustarse en una sola línea o pueden
+            envolverse en múltiples líneas.</p>
+
+        <div><b>Valores</b>
+            <ul>
+                <li>nowrap (valor por defecto): Todos los elementos se colocan en una sola línea.</li>
+                <li>wrap: Los elementos se envuelven en múltiples líneas según sea necesario.</li>
+                <li>wrap-reverse: Los elementos se envuelven en múltiples líneas en orden inverso.</li>
+            </ul>
+        </div>
+
+        <h4>Ejemplo</h4>
+
+        <h4>nowrap</h4>
+        <div class="flex-nowrap">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4 class="line">wrap</h4>
+        <p class="line">(ajustar pantalla)</p>
+        <div class="flex-wrap">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4 class="line">wrap-reverse</h4>
+        <p class="line">(ajustar pantalla)</p>
+        <div class="flex-wrap-reverse">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h3>4. flex-flow</h3>
+
+        <p>La propiedad flex-flow es una forma abreviada de establecer tanto flex-direction como flex-wrap.</p>
+
+        <h4>Sintaxis</h4>
+
+        flex-flow: &lt;flex-direction&gt; &lt;flex-wrap&gt;
+
+        <h4>Ejemplo</h4>
+
+        <h4>flex-flow</h4>
+        <div class="flex-flow">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h3>5. justify-content</h3>
+
+        <p>La propiedad justify-content alinea los elementos flexibles a lo largo del eje principal del contenedor
+            (horizontalmente
+            en una fila, verticalmente en una columna).</p>
+
+        <div><b>Valores</b>
+            <ul>
+                <li>flex-start (valor por defecto): Los elementos se alinean al inicio del contenedor.</li>
+                <li>flex-end: Los elementos se alinean al final del contenedor.</li>
+                <li>center: Los elementos se centran en el contenedor.</li>
+                <li>space-between: Los elementos se distribuyen uniformemente con el primer elemento al inicio y el
+                    último
+                    al final.</li>
+                <li>space-around: Los elementos se distribuyen uniformemente con espacio igual alrededor de cada uno.
+                </li>
+                <li>space-evenly: Los elementos se distribuyen con espacio igual entre ellos.</li>
+            </ul>
+        </div>
+
+        <h4>Ejemplo</h4>
+
+        <h4>flex-start</h4>
+        <div class="flex-start">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4>flex-end</h4>
+        <div class="flex-end">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4>center</h4>
+        <div class="center">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4>space-between</h4>
+        <div class="space-between">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4>space-around</h4>
+        <div class="space-around">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4>space-evenly</h4>
+        <div class="space-evenly">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h3>6. align-items</h3>
+
+        <p>La propiedad align-items alinea los elementos flexibles a lo largo del eje transversal (perpendicular al eje
+            principal)</p>
+        del contenedor.
+
+        <div><b>Valores</b>
+            <ul>
+                <li>stretch (valor por defecto): Los elementos se estiran para llenar el contenedor.</li>
+                <li>flex-start: Los elementos se alinean al inicio del contenedor.</li>
+                <li>flex-end: Los elementos se alinean al final del contenedor.</li>
+                <li>center: Los elementos se centran en el contenedor.</li>
+                <li>baseline: Los elementos se alinean a lo largo de su línea base.</li>
+            </ul>
+        </div>
+
+        <h4>Ejemplo</h4>
+
+        <h4>stretch</h4>
+        <div class="align-items-stretch">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4>flex-start</h4>
+        <div class="align-items-flex-start">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4>flex-end</h4>
+        <div class="align-items-flex-end">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4>center</h4>
+        <div class="align-items-center">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h4>baseline</h4>
+        <div class="align-items-baseline">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+
+        <h3>7. align-content</h3>
+
+        <p>La propiedad align-content alinea las líneas del contenedor flexible cuando hay espacio extra en el eje
+            transversal.</p>
+
+        <div><b>Valores</b>
+            <ul>
+                <li>stretch (valor por defecto): Las líneas se estiran para ocupar el espacio disponible.</li>
+                <li>flex-start: Las líneas se alinean al inicio del contenedor.</li>
+                <li>flex-end: Las líneas se alinean al final del contenedor.</li>
+                <li>center: Las líneas se centran en el contenedor.</li>
+                <li>space-between: Las líneas se distribuyen uniformemente con el primer línea al inicio y la última al
+                    final.</li>
+                <li>space-around: Las líneas se distribuyen uniformemente con espacio igual alrededor de cada una.</li>
+                <li>space-evenly: Las líneas se distribuyen con espacio igual entre ellas.</li>
+            </ul>
+        </div>
+
+        <h4>Ejemplo</h4>
+
+        <h4 class="line">stretch</h4>
+        <p class="line">(ajustar pantalla)</p>
+        <div class="align-content-stretch">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+            <div class="caja">4</div>
+            <div class="caja">5</div>
+            <div class="caja">6</div>
+            <div class="caja">7</div>
+            <div class="caja">8</div>
+            <div class="caja">9</div>
+        </div>
+
+        <h4 class="line">flex-start</h4>
+        <p class="line">(ajustar pantalla)</p>
+        <div class="align-content-flex-start">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+            <div class="caja">4</div>
+            <div class="caja">5</div>
+            <div class="caja">6</div>
+            <div class="caja">7</div>
+            <div class="caja">8</div>
+            <div class="caja">9</div>
+        </div>
+
+        <h4 class="line">flex-end</h4>
+        <p class="line">(ajustar pantalla)</p>
+        <div class="align-content-flex-end">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+            <div class="caja">4</div>
+            <div class="caja">5</div>
+            <div class="caja">6</div>
+            <div class="caja">7</div>
+            <div class="caja">8</div>
+            <div class="caja">9</div>
+        </div>
+
+        <h4 class="line">center</h4>
+        <p class="line">(ajustar pantalla)</p>
+        <div class="align-content-center">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+            <div class="caja">4</div>
+            <div class="caja">5</div>
+            <div class="caja">6</div>
+            <div class="caja">7</div>
+            <div class="caja">8</div>
+            <div class="caja">9</div>
+        </div>
+
+        <h4 class="line">space-between</h4>
+        <p class="line">(ajustar pantalla)</p>
+        <div class="align-content-space-between">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+            <div class="caja">4</div>
+            <div class="caja">5</div>
+            <div class="caja">6</div>
+            <div class="caja">7</div>
+            <div class="caja">8</div>
+            <div class="caja">9</div>
+        </div>
+
+        <h4 class="line">space-around</h4>
+        <p class="line">(ajustar pantalla)</p>
+        <div class="align-content-space-around">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+            <div class="caja">4</div>
+            <div class="caja">5</div>
+            <div class="caja">6</div>
+            <div class="caja">7</div>
+            <div class="caja">8</div>
+            <div class="caja">9</div>
+        </div>
+
+        <h4 class="line">space-evenly</h4>
+        <p class="line">(ajustar pantalla)</p>
+        <div class="align-content-space-evenly">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+            <div class="caja">4</div>
+            <div class="caja">5</div>
+            <div class="caja">6</div>
+            <div class="caja">7</div>
+            <div class="caja">8</div>
+            <div class="caja">9</div>
+        </div>
+
+        <h3>Conclusión</h3>
+        <p>Las propiedades de Flexbox (display: flex, flex-direction, flex-wrap, flex-flow, justify-content, align-items
+            y
+            align-content) proporcionan una gran flexibilidad y control sobre la disposición de los elementos en un
+            contenedor.</p>
+    </main>
+
+    <footer>
+        <p class="footer"><a href="../../index.html">Índice</a></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="stylepseodoclasesbootstrap.css"
+    <title>Pseudoclases & BEM</title>
+</head>
+
+<body>
+    <header>
+        <h1>6.1. Pseudoclases & BEM</h1>
+    </header>
+
+    <main>
+
+        <h2>Pseudoclases</h2>
+        <p>Veremos cómo aplicar diferentes pseudoclases en CSS. Mostraremos cómo utilizar pseudoclases como :hover,
+            :focus, :active, :nth-child y :last-child en ejemplos de código HTML y CSS, explicando el efecto de cada una
+            en los elementos seleccionados.</p>
+
+        <ul>
+            <li>
+                <h3>:hover</h3>
+            </li>
+            <li>
+                <h3>:focus</h3>
+            </li>
+            <li>
+                <h3>:active</h3>
+            </li>
+            <li>
+                <h3>:nth-child</h3>
+            </li>
+            <li>
+                <h3>:last-child</h3>
+            </li>
+        </ul>
+
+        <h2>BEM</h2>
+
+        <p>Modificador de Bloques de Elementos (Block Element Modifier) por sus siglas en inglés. Sugiere una manera
+            estructurada de nombrar tus clases, basada en las propiedades del elemento en cuestión.</p>
+
+        <p>BEM tiene como horizonte modularizar lo máximo posible cada uno de los bloques de código dispuesto. Se centra
+            en tres
+            parámetros o variables posibles: bloques (div, section, article, ul, ol, etc.), elementos (a, button, li,
+            span, etc.) y
+            modificadores. Estos últimos se definen de acuerdo a la posterior utilización que haga el desarrollador a
+            cargo.</p>
+
+        <h3>¿Para que lo usarías?</h3>
+
+        <ul>
+            <li>Para simplificar nuestro CSS y conseguir un estilo consistente, por lo que nuestro código será mucho más
+                legible y fácil de mantener.</li>
+            <li>Si estamos usando un framework de desarrollo web y queremos modificar ciertas clases.</li>
+            <li>Cuando trabajamos en equipo y cada miembro tiene una manera distinta de escribir CSS.</li>
+        </ul>
+
+        <div class="contenedor">
+        <img src="assets/bloques1.avif" class="imgpseudoclases" alt="">
+        <img src="assets/bloques2.avif" class="imgpseudoclases" alt="">
+        <img src="assets/bloques3.avif" class="imgpseudoclases" alt="">
+        </div>
+
+        <h3>Elementos</h3>
+        <p>El elemento es una de las piezas que compondrán la estructura de un bloque. El bloque es el todo, y los
+            elementos son
+            las piezas de este bloque.</p>
+
+        <p>De acuerdo a la metodología BEM, cada elemento se escribe después del bloque padre, usando dos guiones
+            bajos.
+        
+        <img src="assets/elementos1.avif" class="imgpseudoclases" alt="">
+
+
+        <h3>Modificadores</h3>
+        <p>Cuando nombras una clase, la intención es ayudar a que ese elemento pueda ser repetido, para que no tengas
+            que escribir
+            nuevas clases en otras áreas del sitio si los elementos de estilo son los mismos.</p>
+
+        <p>Cuando necesitas modificar el estilo de un elemento específico, puedes usar un modificador. Para lograr
+            esto, añade un
+            doble guión -- luego del elemento (o bloque). Aquí tenemos un corto ejemplo:
+
+            .block--modifier {}
+
+            .block__element--modifier {}</p>
+
+
+    </main>
+
+    <footer>
+        <p class="footer"><a href="../../index.html">Índice</a></p>
+    </footer>
+
+</body>
+
+</html>

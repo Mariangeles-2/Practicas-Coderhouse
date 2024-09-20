@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleboxmodel.css">
+    <link rel="stylesheet" href="../../index.css">
+    <title>Box Model</title>
+</head>
+
+<body>
+    <header>
+        <h1>Box Model</h1>
+        <p>Los elementos y etiquetas son cajas</p>
+        <img src="../assets/boxmodel.png" alt="boxmodel">
+    </header>
+
+    <main>
+        <p>Propiedades de la caja</p>
+
+        <h2>Detalle de las Cuatro Partes Principales del Box Model</h2>
+        <p>El Box Model es un concepto fundamental en CSS que describe cómo se colocan y se dimensionan los elementos
+            HTML en una
+            página web. Comprender las cuatro partes principales del Box Model - content, padding, border y margin - es
+            esencial
+            para controlar el tamaño y el espaciado de los elementos.</p>
+
+        <h3>1. Content</h3>
+        <p>El contenido (content) es el área donde se muestra el contenido del elemento, como texto, imágenes o otros
+            elementos embebidos.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="content-box">Contenido del elemento</div>
+
+        <p>En este ejemplo, el área de contenido tiene un tamaño de 200px de ancho y 100px de alto, y se muestra con un
+            fondo gris claro.</p>
+
+        <h3>2. Padding</h3>
+        <p>El relleno (padding) es el espacio entre el contenido del elemento y su borde. El padding expande el tamaño
+            del elemento sin afectar a otros elementos adyacentes.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="padding-box">Contenido con Padding</div>
+
+        <p>Aquí, el padding de 20px agrega espacio alrededor del contenido dentro del elemento, aumentando su tamaño
+            visual sin
+            cambiar las dimensiones definidas por width y height.</p>
+
+        <h3>3. Border</h3>
+
+        <p>El borde (border) es una línea que rodea el padding (si existe) y el contenido del elemento. El borde también
+            aumenta el tamaño total del elemento.</p>
+
+        <h4>Ejemplo</h4>
+
+        <div class="border-box">Contenido con Border</div>
+
+        <p>En este caso, el borde de 5px rodea el padding y el contenido, incrementando el tamaño visual del elemento.
+        </p>
+
+        <h3>4. Margin</h3>
+
+        <p>El margen (margin) es el espacio fuera del borde del elemento. El margen no afecta el tamaño del elemento,
+            pero sí crea espacio entre el elemento y otros elementos adyacentes.</p>
+
+        <h3>Ejemplo</h3>
+
+        <div class="margin-box">Contenido con Margin</div>
+
+        <p>En este ejemplo, el margen de 30px crea espacio adicional alrededor del borde del elemento, separándolo de
+            otros elementos circundantes.</p>
+
+        <h2>Efecto en el Tamaño y Espaciado</h2>
+        <h3>Tamaño del Elemento</h3>
+        <p>El tamaño total del elemento se calcula sumando el contenido, el padding, el borde y el margen. La fórmula
+            es:</p>
+
+        <p class="resaltado"> <b>Tamaño total</b> = width + padding izquierdo + padding derecho + borde
+            izquierdo + borde derecho + margin izquierdo + margin derecho</p>
+
+        <h4>Ejemplo Completo</h4>
+
+        <div class="box-model">Box Model Completo</div>
+
+        En este ejemplo, el tamaño total visual del elemento sería:
+
+        <p class="resaltado"> Ancho total = 200px (content) + 40px (padding) + 10px (border) + 60px (margin) =
+            310px</p>
+
+        <p class="resaltado"> Alto total = 100px (content) + 40px (padding) + 10px (border) + 60px (margin) =
+            210px</p>
+
+        <h2>Conclusión</h2>
+        <p>El padding determina el espacio del border hacia adentro, es decir, cómo generar más espacio entre el content
+            y el border y el margin es la separación del border hacia afuera.</p>
+
+        <h3>Ejemplos Prácticos</h3>
+
+        <div class="caja">Contenido de la caja</div>
+    </main>
+
+    <footer>
+        <p class="footer"><a href="../../index.html">Índice</a></p>
+    </footer>
+</body>
+
+</html>

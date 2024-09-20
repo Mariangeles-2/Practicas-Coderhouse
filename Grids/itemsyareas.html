@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylegrids.css">
+    <title>Items y áreas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Items y Áreas de la Grilla</h1>
+        <h2>Flexibilización de Ítems Individuales en CSS Grid</h2>
+        <p>En este módulo, aprenderemos cómo flexibilizar y posicionar ítems individuales dentro de una grilla de CSS
+            Grid.
+            Utilizaremos propiedades como grid-column, grid-row, y grid-area para ajustar la posición y el tamaño de
+            elementos específicos. A continuación, se explica cada propiedad junto con ejemplos de código CSS y su
+            resultado visual.</p>
+    </header>
+
+    <main>
+        <h3>1. grid-column</h3>
+        <p>La propiedad grid-column se utiliza para definir en qué columna comienza un ítem y cuántas columnas ocupa.
+            Esta propiedad combina grid-column-start y grid-column-end.</p>
+
+        <div class="grid-column">
+            <div class="caja-ejemplo">Columna 1</div>
+            <div class="caja-ejemplo">Columna 2</div>
+            <div class="caja-ejemplo">Columna 3</div>
+            <div class="caja-ejemplo">Columna 4</div>
+            <div class="item1-grid-column caja-ejemplo">Item</div>
+            <div class="item2-grid-column caja-ejemplo">Item</div>
+        </div>
+
+        En este ejemplo, el ítem comienza en la columna 2 y termina en la columna 4, ocupando dos columnas.
+
+        <h3>2. grid-row</h3>
+        <p>La propiedad grid-row se utiliza para definir en qué fila comienza un ítem y cuántas filas ocupa. Esta propiedad combina grid-row-start y grid-row-end.</p>
+
+        <div class="grid-row">
+            <div class="caja1 caja-ejemplo">Columna 1</div>
+            <div class="caja2 caja-ejemplo">Columna 2</div>
+            <div class="caja3 caja-ejemplo">Columna 3</div>
+            <div class="item1-grid-row caja-ejemplo">Item</div>
+            <div class="item2-grid-row caja-ejemplo">Item</div>
+        </div>
+
+        <p>En este ejemplo, el ítem comienza en la fila 1 y termina en la fila 3, ocupando dos filas.</p>
+
+        <h3>3. grid-area</h3>
+        <p>La propiedad grid-area es una forma abreviada de definir grid-row-start, grid-column-start, grid-row-end y
+            grid-column-end en una sola propiedad.</p>
+
+        <div class="grid-area">
+            <div class="item1-grid-area caja-ejemplo">Item1</div>
+            <div class="item2-grid-area caja-ejemplo">Item2</div>
+            <div class="item3-grid-area caja-ejemplo">Item3</div>
+            <div class="item4-grid-area caja-ejemplo">Item4</div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer"><a href="../../index.html">Índice</a></p>
+    </footer>
+</body>
+
+</html>

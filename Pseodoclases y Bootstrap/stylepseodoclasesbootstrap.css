@@ -1,0 +1,26 @@
+.imgpseudoclases {
+    width: 30em;
+    height: 20em;
+    margin: 1%;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.conteiner {
+    background-color: blue;
+}
+
+/* Cambiar el color de fondo de un botón al pasar el cursor sobre él */
+.button:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Estilo para el primer elemento de una lista */
+.li:first-child {
+    font-weight: bold;
+}

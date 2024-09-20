@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.html">
+    <title>Introducción diseño responsitive</title>
+</head>
+
+<body>
+    <header>
+        <h1>Diseño Responsive</h1>
+        <h2>Introducción al Diseño Responsive y su Importancia en el Desarrollo Web</h2>
+        <p>El diseño responsive es un enfoque en el desarrollo web que garantiza que los sitios web se vean y funcionen
+            bien en una
+            amplia variedad de dispositivos y tamaños de pantalla, desde teléfonos móviles hasta computadoras de
+            escritorio. La
+            importancia del diseño responsive radica en la creciente diversidad de dispositivos utilizados para acceder
+            a la web, lo
+            que hace esencial que los sitios sean accesibles y fáciles de usar en cualquier dispositivo.</p>
+    </header>
+
+    <main>
+        <h3>Importancia del Diseño Responsive</h3>
+        <ul>
+            <li>Mejora la Experiencia del Usuario: Un sitio web que se adapta a diferentes tamaños de pantalla
+                proporciona una mejor
+                experiencia de usuario, lo que puede aumentar el tiempo de permanencia y la satisfacción del usuario.
+            </li>
+            <li>Optimización para Motores de Búsqueda: Google y otros motores de búsqueda favorecen los sitios web que
+                son móviles y
+                responsivos, lo que puede mejorar el ranking en los resultados de búsqueda.</li>
+
+            <li>Mayor Alcance: Un diseño responsive garantiza que el sitio sea accesible para una mayor audiencia,
+                incluidos los
+                usuarios de dispositivos móviles, tabletas y computadoras de escritorio.</li>
+
+            <li>Reducción de Costos de Desarrollo: En lugar de crear y mantener múltiples versiones de un sitio para
+                diferentes
+                dispositivos, un diseño responsive permite gestionar un solo sitio que se adapta a todos los
+                dispositivos.</li>
+        </ul>
+
+        <h3>Uso de Media Queries en CSS</h3>
+        <p>Las media queries son una característica de CSS que permiten aplicar estilos específicos en función de las
+            características del dispositivo, como el ancho y la altura de la pantalla. A continuación, se presentan
+            ejemplos
+            de cómo utilizar media queries para adaptar el diseño a diferentes tamaños de pantalla.</p>
+
+        <p>Si acaso te estás preguntando las medidas exactas para el responsive, la respuesta es que no hay. Ya que son
+            estándares que se llevan y pueden variar. De igual forma, a medida que vayas practicando vas a notar que si
+            trabajas bien
+            flex, grid, medidas relativas, etc., el diseño se va a adaptar de una forma excelente.</p>
+
+        <h4>Ejemplo Básico de Media Query</h4>
+
+        <h5>Estilos para dispositivos móviles</h5>
+        body {
+        <br>
+        font-size: 16px;
+        <br>
+        padding: 10px;
+        <br>
+        }
+
+        <h5>Media query para tabletas</h5>
+        @media (min-width: 600px) {
+        <br>
+        body {
+        <br>
+        font-size: 18px;
+        <br>
+        padding: 20px;
+        <br>
+        }
+        <br>
+        }
+
+        <h5>Media query para computadoras de escritorio</h5>
+        @media (min-width: 1024px) {
+        <br>
+        body {
+        <br>
+        font-size: 20px;
+        <br>
+        padding: 30px;
+        <br>
+        }
+        <br>
+        }
+
+        <h3>Escenarios de Diseño Responsive</h3>
+        <h4>1. Ajuste de la Barra de Navegación</h4>
+        <p>En este ejemplo, ajustamos el diseño de una barra de navegación para que sea más adecuada en dispositivos
+            móviles y de escritorio.</p>
+
+        <h5>Estilos para dispositivos móviles</h5>
+
+        .navbar {
+        <br>
+        display: flex;
+        <br>
+        flex-direction: column;
+        <br>
+        align-items: center;
+        <br>
+        }
+
+        <h5>Media query para tabletas y computadoras de escritorio</h5>
+
+        @media (min-width: 768px) {
+        .navbar {
+        <br>
+        flex-direction: row;
+        <br>
+        justify-content: space-between;
+        <br>
+        }
+        <br>
+        }
+
+        <h4>2. Reorganización del Contenido</h4>
+        <p>Ajustamos la disposición del contenido para que se muestre en una sola columna en dispositivos móviles y en
+            dos
+            columnas en pantallas más grandes.</p>
+
+        <h5>Estilos para dispositivos móviles</h5>
+
+        .container {
+        <br>
+        display: flex;
+        <br>
+        flex-direction: column;
+        <br>
+        }
+
+        <h5>Media query para tabletas y computadoras de escritorio</h5>
+
+        @media (min-width: 768px) {
+        <br>
+        .container {
+        <br>
+        flex-direction: row;
+        <br>
+        justify-content: space-between;
+        <br>
+        }
+        <br>
+        }
+
+        <h4>3. Ajuste de Imágenes Responsivas</h4>
+        Las imágenes también deben ajustarse para adaptarse a diferentes tamaños de pantalla.
+
+        <h5>Estilos para dispositivos móviles</h5>
+
+        img {
+        <br>
+        width: 100%;
+        <br>
+        height: auto;
+        <br>
+        }
+
+        <h5>Media query para computadoras de escritorio</h5>
+
+        @media (min-width: 1024px) {
+        <br>
+        img {
+        <br>
+        width: 50%;
+        <br>
+        }
+        <br>
+        }
+
+        <h4>Ejemplo Completo</h4>
+        <p>A continuación, se presenta un ejemplo completo que combina varios de estos conceptos para crear un diseño
+            responsive.</p>
+
+        <!DOCTYPE html>
+        <html lang="es">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ejemplo de Diseño Responsive</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 10px;
+                }
+
+                .navbar {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: #333;
+                    color: white;
+                    padding: 10px;
+                }
+
+                .navbar a {
+                    color: white;
+                    padding: 10px;
+                    text-decoration: none;
+                }
+
+                .container {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                /* Media query para tabletas */
+                @media (min-width: 600px) {
+                    body {
+                        font-size: 18px;
+                        padding: 20px;
+                    }
+
+                    .navbar {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    .container {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                }
+
+                /* Media query para computadoras de escritorio */
+                @media (min-width: 1024px) {
+                    body {
+                        font-size: 20px;
+                        padding: 30px;
+                    }
+
+                    img {
+                        width: 50%;
+                    }
+                }
+            </style>
+        </head>
+
+        <body>
+            <div class="navbar">
+                <a href="#">Inicio</a>
+                <a href="#">Acerca de</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="container">
+                <div class="content">
+                    <h1>Bienvenidos a nuestro sitio</h1>
+                    <p>Este es un ejemplo de diseño responsive que se adapta a diferentes tamaños de pantalla.</p>
+                </div>
+                <img src="https://via.placeholder.com/800" alt="Ejemplo de imagen">
+            </div>
+        </body>
+
+        </html>
+        <p>Con este enfoque, el sitio web se adapta adecuadamente a diferentes dispositivos, proporcionando una
+            experiencia
+            de usuario consistente y optimizada.</p>
+    </main>
+
+    <footer>
+        <p class="footer"><a href="../index.html">Índice</a></p>
+    </footer>
+</body>
+
+
+
+</body>
+
+</html>
