@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/*SCSS*/
+/*Importar variables*/
+/*Anidamiento*/
+header {
+  background-color: rgb(179, 179, 208);
+}
+header nav {
+  padding: 20px;
+}
+header nav ul {
+  list-style: circle;
+}
+header nav ul li {
+  text-decoration: underline;
+}
+
+/* Definición de una clase base*/
+.button, .secondary-button, .primary-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+}
+
+.primary-button {
+  background-color: blue;
+}
+
+.secondary-button {
+  background-color: gray;
+}
+
+/*Definición de un mixin con parámetros*/
+.primary-button-mixin {
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  background-color: rgb(79, 93, 0);
+}
+
+.secondary-button-mixin {
+  padding: 10px 50px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(141, 0, 0);
+}
+
+body {
+  background-color: rgb(179, 179, 208);
+}
+
+/*Mixin*/
+nav {
+  background-color: rgb(179, 179, 208);
+  border-radius: 15px;
+}
+
+/*# sourceMappingURL=stylescss.css.map */

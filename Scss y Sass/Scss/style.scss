@@ -1,0 +1,22 @@
+/*SCSS*/
+
+/*Importar variables*/
+@import 'variables';
+@import 'header';
+@import 'extend-mixin';
+
+body {
+    background-color: $primary-color;
+} 
+
+/*Mixin*/
+
+@mixin sarasa($color){
+    background-color: $color;
+    border-radius: 15px;
+}
+
+nav{
+    @include sarasa ($primary-color);
+}
+

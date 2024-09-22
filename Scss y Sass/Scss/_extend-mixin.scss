@@ -1,0 +1,36 @@
+/* Definición de una clase base*/
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: blue;
+}
+
+// Extensión de la clase base en otras clases
+.primary-button {
+    @extend .button;
+    background-color: blue;
+}
+
+.secondary-button {
+    @extend .button;
+    background-color: gray;
+}
+
+/*Definición de un mixin con parámetros*/
+@mixin button-styles($padding, $border-radius, $bg-color) {
+    padding: $padding;
+    border-radius: $border-radius;
+    color: white;
+    background-color: $bg-color;
+}
+
+// Uso del mixin en clases
+.primary-button-mixin {
+    @include button-styles(10px 20px, 25px, rgb(79, 93, 0));
+}
+
+.secondary-button-mixin {
+    @include button-styles(10px 50px, 5px, rgb(141, 0, 0));
+}
+

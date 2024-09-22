@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Scss/stylescss.css">
+    <title>Extend y Mixins en SASS</title>
+</head>
+
+<body>
+    <header>
+        <h1>Extend y Mixins en SASS</h1>
+        <p>Este preprocesador de CSS te ofrece dos herramientas poderosas para reutilizar estilos: @extend y @mixin.</p>
+
+        <p>SASS es un preprocesador de CSS que permite escribir estilos más mantenibles y reutilizables. Dos
+            características clave
+            de SASS son @extend y @mixin, que facilitan la reutilización de reglas de estilo.</p>
+    </header>
+
+    <main>
+        <h2>@extend</h2>
+        <p>El @extend en SASS permite compartir un conjunto de reglas de estilo entre diferentes selectores. Esto ayuda
+            a evitar la duplicación de código y a mantener los estilos más limpios.</p>
+
+        <h3>Ejemplo de Uso de @extend</h3>
+
+        <button class="primary-button">HOLA</button>
+        <button class="secondary-button">HOLA2</button>
+
+        <p>En este ejemplo, .primary-button y .secondary-button heredan las propiedades de .button, pero pueden agregar
+            o modificar propiedades específicas.</p>
+
+        <h2>@mixin</h2>
+        <p>Los mixins en SASS permiten definir estilos que se pueden reutilizar en diferentes lugares de tu CSS. A
+            diferencia de @extend, los mixins pueden aceptar parámetros, lo que los hace muy flexibles y poderosos.</p>
+
+        <h3>Ejemplo de Uso de @mixin</h3>
+
+        <button class="primary-button-mixin">HOLA</button>
+        <button class="secondary-button-mixin">HOLA2</button>
+
+        <p>En este ejemplo, el mixin button-styles se utiliza para aplicar estilos de botón a .primary-button y
+            .secondary-button con diferentes colores de fondo.</p>
+
+        <h2>Cuándo Usar @extend y Cuándo Usar @mixin</h2>
+        <ul>
+            <li>
+                @extend: Úsalo cuando tengas un conjunto de reglas de estilo que necesites compartir entre varios
+                selectores sin
+                necesidad de parametrización, es decir, heredar estilos comunes sin necesidad de parámetros
+
+            </li>
+            <li>
+                @mixin: Úsalo cuando necesites reutilizar reglas de estilo que requieran parámetros o cuando necesites
+                incluir
+                un bloque
+                de estilos en múltiples lugares.
+
+            </li>
+        </ul>
+
+        <h3>Conclusión</h3>
+        <p>El uso de @extend y @mixin en SASS puede mejorar significativamente la mantenibilidad y reutilización de tu CSS. Con estas herramientas, puedes escribir estilos más DRY (Don't Repeat Yourself) y gestionar tus hojas de estilo de manera más eficiente.</p>
+    </main>
+
+</body>
+
+</html>
