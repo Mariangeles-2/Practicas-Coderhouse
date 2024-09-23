@@ -1,0 +1,126 @@
+/*Condicional*/
+$theme: light;
+
+.button {
+    @if $theme ==light {
+        background-color: white;
+        color: black;
+    }
+
+    @else if $theme ==dark {
+        background-color: black;
+        color: white;
+    }
+
+    @else {
+        background-color: gray;
+        color: white;
+    }
+}
+
+/*For*/
+@for $i from 1 through 3 {
+    .column-#{$i} {
+        width: calc(100% / $i);
+    }
+}
+
+.cajas {
+    background-color: aqua;
+    height: 15px;
+    margin-bottom: 2px;
+}
+
+/*Each*/
+
+$colors: rojo, verde, azul;
+
+@each $color in $colors {
+    .text-#{$color} {
+        @if $color ==rojo {
+            color: red;
+        }
+
+        @else if $color ==verde {
+            color: green;
+        }
+
+        @else {
+            color: blue;
+        }
+    }
+}
+
+$colors: 'red', 'green', 'blue';
+
+@each $color in $colors {
+    .text-#{$color} {
+        color: $color;
+    }
+}
+
+/*While*/
+
+$i: 6;
+
+@while $i >0 {
+    .item-#{$i} {
+        font-size: 2em * $i;
+    }
+
+    $i: $i - 1;
+}
+
+/*Ejemplo */
+
+$themes: (
+    light,
+    dark
+);
+
+$sizes: (
+    small,
+    medium,
+    large
+);
+
+@each $theme in $themes {
+    @each $size in $sizes {
+        .#{$theme}-#{$size} {
+            @if $theme ==light {
+                background-color: white;
+                color: black;
+            }
+
+            @else {
+                background-color: black;
+                color: white;
+            }
+
+            @if $size ==small {
+                font-size: 1em;
+            }
+
+            @else if $size ==medium {
+                font-size: 1.5em;
+            }
+
+            @else {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+/*Maps*/
+$color-map: (
+    primary: red,
+    secondary: green,
+    danger: orange,
+);
+
+@each $name, $color in $color-map {
+    .#{$name} {
+        background-color: $color;
+    }
+}

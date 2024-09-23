@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Scss/stylescss.css">
     <title>Condicionales y Bucles en SASS</title>
 </head>
 
@@ -17,112 +18,68 @@
             dinámicos.</P>
     </header>
     <main>
-        Condicionales en SASS
-        Los condicionales en SASS permiten aplicar estilos en función de condiciones específicas. Se utilizan con la
-        directiva
-        @if.
+        <h2>Condicionales en SASS</h2>
+        <p>Los condicionales en SASS permiten aplicar estilos en función de condiciones específicas. Se utilizan con la
+        directiva @if.</p>
 
-        Ejemplo de Uso de Condicionales
+        <h3>Ejemplo de Uso de Condicionales</h3>
+    
+        <button class="button">HOLA</button>
 
-        Copiar
-        scssCopiar código
-        $theme: light;
+        <p>En este ejemplo, los estilos de .button cambian según el valor de la variable $theme.</p>
 
-        .button {
-        @if $theme == light {
-        background-color: white;
-        color: black;
-        } @else if $theme == dark {
-        background-color: black;
-        color: white;
-        } @else {
-        background-color: gray;
-        color: white;
-        }
-        }
-        En este ejemplo, los estilos de .button cambian según el valor de la variable $theme.
+        <h2>Bucles en SASS</h2>
+        <p>Los bucles en SASS permiten iterar sobre listas, mapas o rangos de números, aplicando estilos de manera repetitiva y dinámica. Se utilizan con las directivas @for, @each, y @while.</p>
 
-        Bucles en SASS
-        Los bucles en SASS permiten iterar sobre listas, mapas o rangos de números, aplicando estilos de manera
-        repetitiva y
-        dinámica. Se utilizan con las directivas @for, @each, y @while.
+        <h3>Ejemplo de Uso de @for</h3>
 
-        Ejemplo de Uso de @for
+        <div class="column-1 cajas">caja al 100%</div>
+        <div class="column-2 cajas">caja al 50%</div>
+        <div class="column-3 cajas">caja al 33.3%</div>
+        
+        <p>Este bucle genera clases .column-1, .column-2, y .column-3 con anchos correspondientes.</p>
 
-        Copiar
-        scssCopiar código
-        @for $i from 1 through 3 {
-        .column-#{$i} {
-        width: 100% / $i;
-        }
-        }
-        Este bucle genera clases .column-1, .column-2, y .column-3 con anchos correspondientes.
+        <h3>Ejemplo de Uso de @each</h3>
 
-        Ejemplo de Uso de @each
+        <div class="text-rojo">caja</div>
+        <div class="text-verde">caja</div>
+        <div class="text-azul">caja</div>
+        
+        <p>Este bucle genera clases .text-red, .text-green, y .text-blue con colores correspondientes.</p>
 
-        Copiar
-        scssCopiar código
-        $colors: red, green, blue;
+        <h3>Ejemplo de Uso de @while</h3>
 
-        @each $color in $colors {
-        .text-#{$color} {
-        color: $color;
-        }
-        }
-        Este bucle genera clases .text-red, .text-green, y .text-blue con colores correspondientes.
+        <div class="item-6">Caja</div>
+        <div class="item-5">Caja</div>
+        <div class="item-4">Caja</div>
+        <div class="item-3">Caja</div>
+        <div class="item-2">Caja</div>
+        <div class="item-1">Caja</div>
 
-        Ejemplo de Uso de @while
+        <p>Este bucle genera clases .item-6, .item-5, hasta .item-1 con tamaños de fuente decrecientes.</p>
 
-        Copiar
-        scssCopiar código
-        $i: 6;
-
-        @while $i > 0 {
-        .item-#{$i} {
-        font-size: 2em * $i;
-        }
-        $i: $i - 1;
-        }
-        Este bucle genera clases .item-6, .item-5, hasta .item-1 con tamaños de fuente decrecientes.
-
-        Combinando Condicionales y Bucles
+        <h2>Combinando Condicionales y Bucles</h2>
         Puedes combinar condicionales y bucles para crear estilos más complejos y dinámicos.
 
-        Ejemplo Combinado
+        <h3>Ejemplo Combinado</h3>
 
-        Copiar
-        scssCopiar código
-        $themes: (light, dark);
-        $sizes: (small, medium, large);
+        <div class="light-small">Caja</div>
+        <div class="light-medium">Caja</div>
+        <div class="light-large">Caja</div>
+        <div class="dark-small">Caja</div>
+        <div class="dark-medium">Caja</div>
+        <div class="dark-large">Caja</div>
 
-        @each $theme in $themes {
-        @each $size in $sizes {
-        .#{$theme}-#{$size} {
-        @if $theme == light {
-        background-color: white;
-        } @else {
-        background-color: black;
-        }
+        <p>Este ejemplo genera clases como .light-small, .dark-large, etc., con estilos adaptados a cada combinación de tema y tamaño.</p>
 
-        @if $size == small {
-        font-size: 1em;
-        } @else if $size == medium {
-        font-size: 1.5em;
-        } @else {
-        font-size: 2em;
-        }
-        }
-        }
-        }
-        Este ejemplo genera clases como .light-small, .dark-large, etc., con estilos adaptados a cada combinación de
-        tema y
-        tamaño.
+        <h3>Conclusión</h3>
+        <p>El uso de condicionales y bucles en SASS permite escribir hojas de estilo más eficientes, dinámicas y fáciles de mantener. Estas características de programación amplían las capacidades de CSS, facilitando la creación de diseños complejos y adaptables.</p>
 
-        Conclusión
-        El uso de condicionales y bucles en SASS permite escribir hojas de estilo más eficientes, dinámicas y fáciles de
-        mantener. Estas características de programación amplían las capacidades de CSS, facilitando la creación de
-        diseños
-        complejos y adaptables.
+        <h2>Maps</h2>
+
+        <div class="primary">Caja</div>
+        <div class="secondary">Caja</div>
+        <div class="danger">Caja</div>
     </main>
 </body>
 
